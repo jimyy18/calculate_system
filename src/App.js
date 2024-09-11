@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  const [input, setInput] = useState(""); // To store the input value
-  const [result, setResult] = useState(null); // To store the result (number, reciprocal, and difference)
+  const [input, setInput] = useState("");
+  const [result, setResult] = useState(null);
 
   // Handle input change and only allow integers
   function handleInputChange(e) {
-    const value = e.target.value.replace(/[^0-9]/g, ""); // Allow only numbers
+    const value = e.target.value.replace(/[^0-9]/g, "");
     setInput(value);
   }
 
@@ -36,7 +36,7 @@ export default function App() {
         <input
           type="text"
           value={input}
-          onChange={handleInputChange} // Update the input as the user types
+          onChange={handleInputChange}
         />
         <button onClick={handleInput}>Submit</button>
       </div>
